@@ -1,0 +1,686 @@
+ /* Header start  */
+ .header_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary_color);
+ }
+ .header_wrapper .Image_wrapper{
+    width: 200px;
+ }
+ /* Header end */
+ /* Image With Text css Start */
+
+ #ImageWithText .gridWrapper{
+    display: grid;
+    grid-template-columns: 55% 40%;
+    gap: 5%;
+    grid-template-areas: 'info img';
+ }
+
+  #ImageWithText .infoBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: info;
+     
+  }
+   #ImageWithText .imgBlock {
+       /* width: 80%; */
+       margin: auto;
+       grid-area: img;
+   }
+
+   #ImageWithText .subHeading{
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--secondary_color);
+        text-transform: uppercase;
+        padding-bottom: 10px;
+   }
+
+   #ImageWithText .heading{
+        color: var(--primary_color);
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1.1;
+        text-transform: uppercase;
+   }
+
+   #ImageWithText .btnBlock .button {
+    background-color: var(--secondary_color);
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    cursor : pointer;
+    font-size: 14px;
+    border-radius: 2px;
+   }
+
+   #ImageWithText .btnBlock .button:hover{
+        opacity: 0.8;
+        transition: all 0.2s linear;
+   }
+
+   #ImageWithText .description {
+    font-size: 16px;
+    padding: 30px 0px;
+    line-height: 1.8;
+   }
+   
+
+   @media(max-width: 767px){
+        #ImageWithText .gridWrapper {
+                grid-template-columns: 100%;
+                gap: 2%;
+                grid-template-areas:
+                    'img'
+                    'info';
+            }
+
+            #ImageWithText .subHeading {
+                font-size: 18px;
+            }
+
+            #ImageWithText .heading {
+                font-size: 35px;
+            }
+
+            #ImageWithText .description {
+                padding: 20px 0px;
+            }
+   }
+
+ /* Image With Text css End */
+/* ///////////////////////////////////////////////////////////////////////////// */
+ /* popup css start*/
+   #Modal .modal-overlay {
+       z-index: 50;
+        background-color: rgba(0, 0, 0, 0.6);
+       /* backface-visibility: 50%; */
+       position: absolute;
+       left: 0;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       z-index: 1;
+       height: 100%;
+       cursor: pointer;
+   }
+
+   #Modal .modal-content-wrapper {
+       position: absolute;
+       z-index: 10;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%);
+       padding: 1.25rem;
+       border-radius: 0.75rem;
+   }
+ 
+
+   #Modal .img_wrapper {
+       width: 25px;
+       height: auto;
+   }
+ /* popup css end*/
+/* ///////////////////////////////////////////////////////////////////////////// */
+ /* contact form css start*/
+
+#contactForm{
+    background-color: #fff;
+    color: #000;
+    opacity: 100%;
+    cursor: auto;
+    padding: 20px 30px;
+    max-width: 450px;
+}
+#contactForm .heading{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#contactForm input{
+    display: block;
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        padding: 5px;
+        border-bottom: 1px solid #6F718F99;
+        margin-bottom: 10px;
+}
+ 
+#contactForm input:focus{
+    outline: none;
+}
+
+#contactForm .nameInput{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+}
+#contactForm .TermCondions{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    font-size: 14px;
+    color: #616678;
+    padding: 20px 0px;
+
+}
+#contactForm .termCheckBox{
+    width: fit-content;
+    accent-color: var(--secondary_color);
+    transform: scale(1.1);
+}
+#contactForm .contactUs{
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: var(--secondary_color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+} 
+
+#contactForm .contactUs:hover {
+    opacity: 0.8;
+    transition: all 0.2s linear;
+}
+
+@media (max-width: 767px){
+#contactForm{
+    width: 90vw !important;
+}
+
+}
+
+/* contact form end  */
+/* ///////////////////////////////////////////////////////////////////////////// */
+/* textblock css start  */
+   #TextBlock .contentWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 10px;
+        text-align: center;
+   }
+   #TextBlock .subHaeding{
+    font-size: 24px;
+    color: var(--secondary_color);
+    text-transform: uppercase;
+   }
+   #TextBlock .Haeding{
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+   }
+   #TextBlock .description{
+    margin: 20px 0px;
+    font-size: 20px;
+    position: relative;
+    z-index: 3;
+   }
+   #TextBlock .description .note{
+    margin: 20px 0px;
+    font-size: 20px;
+    color: #808080;
+   }
+   #TextBlock .description .notehead{
+    display: inline-block;
+    color: var(--secondary_color);
+    font-weight: 800;
+   }
+
+   #TextBlock .quoteimgwrapper{
+    position: absolute;
+        left: 12px;
+        top: -12px;
+        width: 64px;
+        z-index: -1 !important;
+   }
+
+   @media(max-width:768px){
+    #TextBlock .contentWrapper{
+        max-width: 100%;
+    }
+
+    #TextBlock .Haeding {
+        font-size: 35px; 
+    }
+
+    #TextBlock .subHaeding {
+        font-size: 18px;
+    }
+   }
+/* textblock css end  */
+/* ///////////////////////////////////////////////////////////////////////////// */
+/* GrowthIndecator css start  */
+#GrowthIndecator{
+    background-color: #FAFAFA;
+}
+#GrowthIndecator .header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#GrowthIndecator .subHeading{
+    font-size: 24px;
+        color: var(--secondary_color);
+        text-transform: uppercase;
+}
+
+#GrowthIndecator .Heading{
+    font-size: 45px;
+        font-weight: 600;
+        text-transform: uppercase;
+}
+#GrowthIndecator .gridWrapper{
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#GrowthIndecator .box{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    cursor: pointer;
+        transition: all .2s linear;
+}
+
+#GrowthIndecator .logo{
+    width: 40px;
+}
+#GrowthIndecator .count{
+    font-size: 60px;
+    font-weight: 400;
+}
+#GrowthIndecator .description{
+    font-size: 18px;
+}
+
+#GrowthIndecator .box:hover{
+    box-shadow: inset;
+        transform: scale(1.05) translate(-5px, 2px);
+        box-shadow: 3px 6px 20px #672C2C1F;
+        /* box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75); */
+}
+
+@media(max-width:768px){
+    #GrowthIndecator .subHeading {
+        font-size: 18px;
+
+    }
+
+    #GrowthIndecator .Heading {
+        font-size: 35px; 
+    }
+
+    #GrowthIndecator .gridWrapper {
+            grid-template-columns: 49% 49%;
+               row-gap: 10px;
+                text-align: center;
+    }
+    #GrowthIndecator .logo {
+        width: 30px;
+    }
+
+    #GrowthIndecator .count {
+        font-size: 40px;
+    }
+}
+/* GrowthIndecator css end  */
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* IconWithDescription css start  */
+#IconWithDescription {
+    background-color: #FFFF;
+}
+
+#IconWithDescription .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#IconWithDescription .subHeading {
+    font-size: 24px;
+    color: var(--secondary_color);
+    text-transform: uppercase;
+}
+
+#IconWithDescription .Heading {
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#IconWithDescription .gridWrapper {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#IconWithDescription .box {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+#IconWithDescription .logo {
+    width: 70px;
+}
+
+ #IconWithDescription .title{
+    font-size: 18px;
+    font-weight: 600;
+ }
+
+#IconWithDescription .description {
+    font-size: 16px;
+}
+
+ 
+
+@media(max-width:768px) {
+    #IconWithDescription .subHeading {
+        font-size: 18px;
+
+    }
+
+    #IconWithDescription .Heading {
+        font-size: 35px;
+    }
+
+        #IconWithDescription .box{
+            padding: 10px; 
+        }
+    #IconWithDescription .gridWrapper {
+        grid-template-columns: 49% 49%;
+        gap: 2%;
+        text-align: center;
+    }
+
+    #IconWithDescription .logo {
+        width: 50px;
+    }
+
+     
+}
+
+/* IconWithDescription css end  */
+/* ///////////////////////////////////////////////////////////////////////////// */
+/* footer css start */
+#Footer{
+    background-color: var(--secondary_color);
+    
+}
+/* footer css end  */
+
+
+/* slider css start  */
+
+#slider .subHeading{
+    font-size: 24px;
+    color: var(--secondary_color);
+}
+
+#slider .headingWrapper{ 
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+#slider .heading{
+    font-size: 45px !important;
+    font-weight: 600;
+    line-height: 1.1;
+}
+ 
+
+#slider .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#slider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #060606;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+#slider .swiper-pagination{
+    position: relative;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    width: unset;
+    text-align: left;
+    padding: 10px 0px;
+     
+
+}
+#slider .swiper-pagination-bullet {
+     margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+     opacity: 1;
+ }
+#slider .swiper-pagination-bullet-active{
+    outline: 1px solid var(--secondary_color);
+    outline-offset: 6px;
+
+}
+#slider .customslide{
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#slider .customslide:hover .content{
+    opacity: 1;
+}
+#slider .content{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary_color);
+    border-radius: 5px;
+    transition: all .2s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+
+}
+#slider .imgWrapper{
+    width: 60px;
+}
+
+#slider .title{
+    font-size: 24px;
+}
+#slider .description{
+    font-size: 16px;
+}
+
+#slider .button{
+    font-size: 14px;
+    background-color: #fff;
+    color: var(--secondary_color);
+    padding: 15px 20px;
+    font-weight: 600;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+} 
+#slider .arrowicon{
+    width: 35px;
+    height:auto ;
+}
+
+:root #slider{
+    --swiper-theme-color: var(--secondary_color) !important;
+}
+
+@media(max-width: 768px){
+    #slider .headingWrapper{
+        grid-template-columns: 100%;
+    }
+    #slider .headingWrapper.container{
+        max-width: 100%;
+    }
+        #slider .heading{
+            font-size: 35px !important;
+            margin-bottom: 20px;
+        }
+        #slider .headingWrapper{
+            padding: 20px 0px !important;
+        }
+    
+}
+
+/* slider css end  */
+
+
+/* thumbnail slider css start  */
+#thumbnailslider .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#thumbnailslider .subHeading {
+    font-size: 24px;
+    color: var(--secondary_color);
+    text-transform: uppercase;
+}
+
+#thumbnailslider .Heading {
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#thumbnailslider .gridWrapper{
+    display: grid;
+    grid-template-columns: 59% 39%;
+    justify-content: space-between;
+}
+ #thumbnailslider .imgBlockWrapper{
+    border-radius: 5px;
+    overflow: hidden ;
+}
+#thumbnailslider .infoSlideWrapper{
+    display: grid;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+}
+#thumbnailslider .infoSlide{
+    border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+
+#thumbnailslider .infoSlide {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#thumbnailslider .infoSlide.active{
+    background-color: var(--secondary_color);
+    
+
+}
+#thumbnailslider .active .title{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#thumbnailslider .active .description{
+    font-size: 16px;
+    color: #fff;
+}
+#thumbnailslider  .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#thumbnailslider  .description{
+    font-size: 16px;
+}
+
+#thumbnailslider .infoSlide:last-child {
+    border:none;
+}
+
+@media(max-width:768px){
+    #thumbnailslider .subHeading {
+            font-size: 18px;
+    
+        }
+    
+    #thumbnailslider .Heading {
+        font-size: 35px;
+    }
+        #thumbnailslider .gridWrapper {
+            display: grid;
+            grid-template-columns: 100%;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        #thumbnailslider  .title {
+            font-size: 18px;  
+        }
+}
+/* thumbnail slider css end  */
